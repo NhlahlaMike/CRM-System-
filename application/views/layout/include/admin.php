@@ -1,0 +1,65 @@
+    <div class="sidebar" data-color="red" data-image="assets/img/sidebar-6.webp">
+ <?php
+	$dashboard='';
+	$import='';
+	$confirm='';
+	$manual='';
+	$edit='';
+	$view_leads='';
+	$add_sales='';
+	
+	if($active=='dashboard')
+		$dashboard='class="active"';
+	else if($active=='import')
+	$import='class="active"';
+	else if($active=='confirm')
+	$confirm='class="active"';
+	else if($active=='manual')
+	$manual='class="active"';
+	else if($active=='edit')
+	$edit='class="active"';
+	else if($active=='view_leads')
+	$view_leads='class="active"';
+	
+	
+	?>
+    
+
+        Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
+        Tip 2: you can also add an image using data-image tag
+
+    
+
+    	<div class="sidebar-wrapper">
+            <div class="logo">
+      
+                <a href="http://www.creative-tim.com" class="simple-text">
+                    Creative Tim
+                    
+                </a>
+            </div>
+
+            <ul class="nav">
+            
+            
+            
+                <li <?php echo $dashboard?>> <a href="<?php echo base_url(); ?>"> <i class="pe-7s-graph"></i>
+        <p>Dashboard</p>
+        </a> </li>
+      <li <?php echo $import;?> > <a href="<?php echo base_url(); ?>customer/import"> <i class="pe-7s-next-2"></i>
+        <p>Import</p>
+        </a> </li>
+      <li <?php echo $confirm;?>> <a href="<?php echo base_url(); ?>customer/confirm"> <i class="pe-7s-cash"></i>
+        <p>Confirm Invoice</p>
+        </a> </li>
+      <li <?php echo $manual;?>> <a href="<?php echo base_url(); ?>"> <i class="pe-7s-note2"></i>
+        <p>Manual Registration</p>
+        </a> </li>
+      <li <?php echo $edit;?>> <a href="<?php echo base_url(); ?>"> <i class="pe-7s-news-paper"></i>
+        <p>View/Edit Customers</p>
+        </a> </li>
+      <li <?php echo $view_leads;?>> <a href="<?php echo base_url(); ?>"> <i class="pe-7s-id"></i>
+        <p>View Leads</p>
+        </a> </li>
+    	</div>
+    </div>
